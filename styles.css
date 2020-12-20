@@ -1,0 +1,126 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    color: #02353b;
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    justify-content: center;
+}
+
+.container{
+    background-color: rgb(47, 182, 182);
+    margin: 50px;
+    padding: 50px;
+    border-radius: 25px;
+}
+
+.title{
+    text-align: center;
+}
+
+.title span{
+    color: rgb(158, 14, 57);
+}
+
+.action{
+    display: flex;
+    margin-top: 25px;
+    font-size: 25px;
+    justify-content: space-around;
+    height: 30px;
+}
+
+.status span{
+    color: darkred;
+}
+
+.reset{
+    cursor: pointer;
+}
+
+.reset:hover{
+    color: lightcoral;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 15px;
+    margin-top: 50px;
+    background: rgb(158, 14, 57);
+}
+
+.cell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 200px;
+    width: 200px;
+    background: rgb(47, 182, 182);
+}
+
+.x,
+.o {
+  cursor: auto;
+}
+
+.x::after{
+    content: '×';
+    font-size: 200px;
+}
+
+.o::after{
+    content: '○';
+    font-size: 225px;
+    color: darkred;
+}
+
+.won::after{
+    color: coral;
+}
+
+@media only screen and (max-width: 1024px) {
+    .grid {
+      margin-top: 25px;
+      grid-gap: 10px;
+    }
+  
+    .cell {
+      height: 150px;
+      width: 150px;
+    }
+  
+    .x::after {
+      font-size: 150px;
+    }
+  
+    .o::after {
+      font-size: 175px;
+    }
+  }
+  
+  @media only screen and (max-width: 540px) {
+    .container {
+      margin: 25px;
+      padding: 25px;
+    }
+  
+    .cell {
+      height: 100px;
+      width: 100px;
+    }
+  
+    .x::after {
+      font-size: 100px;
+    }
+  
+    .o::after {
+      font-size: 125px;
+    }
+  }
